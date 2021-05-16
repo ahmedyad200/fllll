@@ -151,7 +151,7 @@ io.popen("mkdir File_Bot")
 io.popen("cd File_Bot && rm -rf commands.lua.1") 
 io.popen("cd File_Bot && rm -rf commands.lua.2") 
 io.popen("cd File_Bot && rm -rf commands.lua.3") 
-io.popen("cd File_Bot && wget https://raw.githubusercontent.com/devid100/vvvvvv/main/File_Bot/commands.lua") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/ahmedyad200/fllll/master/File_Bot/commands.lua") 
 t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
@@ -877,8 +877,6 @@ if DevSoFi(msg) then
 local bl = 'انت الان المطور الاساسي في البوت \n سورس بيلي\n يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/sourcesela)'
 local keyboard = {
 {'الاحصائيات','المطور','الثانوين'},
-{'ديفيد مبرمج السورس','مبرمج السورس²'},
-{'قناه السورس','بوت تواصل'},
 {'اضف رد عام','حذف رد عام'},
 {'اضف رد متعدد','حذف رد متعدد'},
 {'تعطيل الاذاعه','تفعيل الاذاعه'},
@@ -1089,62 +1087,13 @@ end
 
 if text == 'تحديث السورس ' and DevSoFi(msg) then 
 os.execute('rm -rf DRAGON.lua')
-os.execute('wget https://raw.githubusercontent.com/devid100/vvvvvv/main/DRAGON.lua')
+os.execute('wget https://raw.githubusercontent.com/ahmedyad200/fllll/master/DRAGON.lua')
 send(msg.chat_id_, msg.id_,'✤︎ تم تحديث السورس')
 dofile('DRAGON.lua')  
 end
 if text == 'الاصدار ' and DevSoFi(msg) then 
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' ✤︎ اصدار سورس بيلي { s: 6.7}')
-end
-if text == 'ديفيد مبرمج السورس' and DevSoFi(msg) then
-database:del(bot_id..'Srt:Bot') 
-local Text = [[ 
-[DEV Devid](t.me/de_vi_d)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '  ✤ ⁽ＤＥＶＩＤ₎ ✤ ', url="t.me/de_vi_d"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'مبرمج السورس²' and DevSoFi(msg) then
-database:del(bot_id..'Srt:Bot') 
-local Text = [[ 
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '  ✤ ⁽ＤＯＮＧＯＬ₎ ✤ ',url="t.me/UU_DON"}},
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'قناه السورس' and DevSoFi(msg) then
-database:del(bot_id..'Srt:Bot') 
-local Text = [[ 
-[CH](t.me/sourcesela)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'قناه السورس️️', url="t.me/sourcesela"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-if text == 'بوت تواصل' and DevSoFi(msg) then
-database:del(bot_id..'Srt:Bot') 
-local Text = [[ 
-[TWL](t.me/de_vi_d25BOT)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = '  ❨ TＷＡＳＯＬ 🦇  ❩ ', url="t.me/I_E_S9BOT"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == "ضع اسم للبوت" and DevSoFi(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
@@ -2427,9 +2376,9 @@ end
 return false
 end
 os.execute('rm -rf DRAGON.lua')
-os.execute('wget https://raw.githubusercontent.com/devid100/vvvvvv/main/DRAGON.lua')
-os.execute('wget https://raw.githubusercontent.com/devid100/vvvvvv/main/library')
-os.execute('wget https://raw.githubusercontent.com/devid100/vvvvvv/main/File_Bot')
+os.execute('wget https://raw.githubusercontent.com/ahmedyad200/fllll/master/DRAGON.lua')
+os.execute('wget https://raw.githubusercontent.com/ahmedyad200/fllll/master/library')
+os.execute('wget https://raw.githubusercontent.com/ahmedyad200/fllll/master/File_Bot')
 send(msg.chat_id_, msg.id_,' ✤︎ تم تحديث السورس')
 dofile('DRAGON.lua')  
 end
@@ -2734,7 +2683,7 @@ local TWEET_Msg = {
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
 "اخر كتاب قرآته", 
-"ليه ديفيد جدع؟ ", 
+"ليه أحمد جدع؟ ", 
 "افضل يوم ف حياتك", 
 "ليه مضيفتش كل جهاتك", 
 "حكمتك ف الحياه", 
@@ -4279,7 +4228,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevSoFi(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/devid100/vvvvvv/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/ahmedyad200/fllll/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -4317,7 +4266,7 @@ t = " ✤︎ الملف ← "..file.."\n ✤︎ تم تعطيل ملف \n"
 else
 t = " ✤︎ بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/devid100/vvvvvv/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/ahmedyad200/fllll/master/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -4337,7 +4286,7 @@ t = " ✤︎ بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = " ✤︎ الملف ← "..file.."\n ✤︎ تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/devid100/vvvvvv/main/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/ahmedyad200/fllll/master/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
@@ -13706,7 +13655,7 @@ keyboard.inline_keyboard = {
 {text = 'الاوامر🎯', callback_data="/help90"},
 },
 {
-{text = ' 𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝚅𝙸𝚁𝙰', url="t.me/sourcesela"},
+{text = ' 𝚂𝙾𝚄𝚁𝙲𝙴 ʙᴀʟʟɪᴇ', url="t.me/sourcesela"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -14540,7 +14489,7 @@ keyboard.inline_keyboard = {
 {text = 'BACK🦇 ', callback_data="/add"},
 },
 {
-{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝚅𝙸𝚁𝙰', url="t.me/sourcesela"},
+{text = '𝚂𝙾𝚄𝚁𝙲𝙴 ʙᴀʟʟɪᴇ', url="t.me/sourcesela"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -14612,7 +14561,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝚅𝙸𝚁𝙰', url="t.me/sourcesela"},
+{text = '𝚂𝙾𝚄𝚁𝙲𝙴 ʙᴀʟʟɪᴇ', url="t.me/sourcesela"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -14642,7 +14591,7 @@ keyboard.inline_keyboard = {
 {text = ' القائمة الرئيسيه ', callback_data="/add"},
 },
 {
-{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝚅𝙸𝚁𝙰', url="t.me/sourcesela"},
+{text = '𝚂𝙾𝚄𝚁𝙲𝙴 ʙᴀʟʟɪᴇ', url="t.me/sourcesela"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -14676,7 +14625,7 @@ keyboard.inline_keyboard = {
 {text = 'BACK🦇 ', callback_data="/add"},
 },
 {
-{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝚅𝙸𝚁𝙰', url="t.me/sourcesela"},
+{text = '𝚂𝙾𝚄𝚁𝙲𝙴 ʙᴀʟʟɪᴇ', url="t.me/sourcesela"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -14709,7 +14658,7 @@ keyboard.inline_keyboard = {
 {text = 'الاوامر🎯', callback_data="/help90"},
 },
 {
-{text = ' 𝚂𝙾𝚄𝚁𝙲𝙴 𝙰𝚅𝙸𝚁𝙰', url="t.me/sourcesela"},
+{text = ' 𝚂𝙾𝚄𝚁𝙲𝙴 ʙᴀʟʟɪᴇ', url="t.me/sourcesela"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
